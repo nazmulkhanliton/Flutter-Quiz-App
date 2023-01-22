@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
+import '../../../constants.dart';
+
 class Body extends StatelessWidget {
   const Body({
     Key key,
@@ -18,6 +20,19 @@ class Body extends StatelessWidget {
           'assets/icons/bg.svg',
           width: width,
           fit: BoxFit.fill,
+        ),
+        SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: Container(
+              width: double.infinity,
+              height: 35,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white, width: 2),
+                borderRadius: BorderRadius.circular(50),
+              ),
+            ),
+          ),
         ),
       ],
     );
